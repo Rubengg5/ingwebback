@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Projects\\universidad\\ingwebback\\Parcial3\\Parcial3.csproj": {}
+    "C:\\Projects\\universidad\\Parcial3IngWeb\\Parcial3\\Parcial3\\Parcial3.csproj": {}
   },
   "projects": {
-    "C:\\Projects\\universidad\\ingwebback\\Parcial3\\Parcial3.csproj": {
+    "C:\\Projects\\universidad\\Parcial3IngWeb\\Parcial3\\Parcial3\\Parcial3.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Projects\\universidad\\ingwebback\\Parcial3\\Parcial3.csproj",
+        "projectUniqueName": "C:\\Projects\\universidad\\Parcial3IngWeb\\Parcial3\\Parcial3\\Parcial3.csproj",
         "projectName": "Parcial3",
-        "projectPath": "C:\\Projects\\universidad\\ingwebback\\Parcial3\\Parcial3.csproj",
+        "projectPath": "C:\\Projects\\universidad\\Parcial3IngWeb\\Parcial3\\Parcial3\\Parcial3.csproj",
         "packagesPath": "C:\\Users\\Rubén\\.nuget\\packages\\",
-        "outputPath": "C:\\Projects\\universidad\\ingwebback\\Parcial3\\obj\\",
+        "outputPath": "C:\\Projects\\universidad\\Parcial3IngWeb\\Parcial3\\Parcial3\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

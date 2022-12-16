@@ -43,6 +43,12 @@ namespace Parcial3.Controllers
             return x;
         }
 
+        [HttpGet("getByUsuario/{usuario}")]
+        public async Task<List<x>> GetByUsuario(Guid usuario)
+        {
+            return await xService.GetByUsuario(usuario);
+        }
+
         [HttpPost]
         public async Task<IActionResult> Post(x newx)
         {
@@ -121,5 +127,7 @@ namespace Parcial3.Controllers
 
             return xs;
         }
+
+
     }
 }

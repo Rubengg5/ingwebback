@@ -10,5 +10,9 @@ namespace Parcial3.Models
 
         public int Mg { get; set; }
 
+        public Guid Usuario { get; set; }
+        public string urlImagen { get; set; }
+        public Ubicacion ubicacion { get; set; }
+
     }
 }

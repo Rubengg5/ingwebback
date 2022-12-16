@@ -1,6 +1,7 @@
 ﻿using Microsoft.Extensions.Options;
 using MongoDB.Driver;
 using Parcial3.Models;
+using System.Xml.Linq;
 
 namespace Parcial3.Services
 {
@@ -38,5 +39,8 @@ namespace Parcial3.Services
 
         public async Task<x?> GetByName(string name) =>
             await xCollection.Find(x => x.Name == name).FirstOrDefaultAsync();
+
+        public async Task<List<x>> GetByUsuario(Guid Usuario) => 
+            await xCollection.Find(x => x.Usuario == Usuario).ToListAsync();
     }
 }
