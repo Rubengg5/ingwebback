@@ -10,6 +10,8 @@
 
         public string xCollectionName { get; set; } = null!;
 
+        public string ParadaCollectionName { get; set; } = null!;
+
 
     }
 }

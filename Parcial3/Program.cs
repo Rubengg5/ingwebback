@@ -8,6 +8,7 @@ builder.Services.Configure<iwebDatabaseSettings>(
 
 builder.Services.AddSingleton<UsuarioService>();
 builder.Services.AddSingleton<xService>();
+builder.Services.AddSingleton<ParadaService>();
 /*builder.Services.AddSingleton<UsuariosService>();*/
 
 builder.Services.AddControllers();
