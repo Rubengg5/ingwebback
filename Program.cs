@@ -8,11 +8,8 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.Configure<iwebDatabaseSettings>(
     builder.Configuration.GetSection("iwebDatabase"));
 
-builder.Services.AddSingleton<ViviendasService>();
-builder.Services.AddSingleton<ReservasService>();
 builder.Services.AddSingleton<UsuariosService>();
-builder.Services.AddSingleton<ValoracionesService>();
-builder.Services.AddSingleton<MensajesService>();
+builder.Services.AddSingleton<MessagesService>();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
