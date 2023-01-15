@@ -10,6 +10,6 @@ public class iwebDatabaseSettings
 
     public string MessagesCollectionName { get; set; } = null!;
 
-    public string LogCollectionName { get; set; } = null!;
+    public string LogsCollectionName { get; set; } = null!;
 
 }

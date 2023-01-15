@@ -7,7 +7,7 @@ namespace B3serverREST.Services
 {
     public class LogService
     {
-        private readonly IMongoCollection<Log> LogCollection;
+        private readonly IMongoCollection<Log> logCollection;
 
         public LogService(
             IOptions<iwebDatabaseSettings> iwebDatabaseSettings)
@@ -18,18 +18,18 @@ namespace B3serverREST.Services
             var mongoDatabase = mongoClient.GetDatabase(
                 iwebDatabaseSettings.Value.DatabaseName);
 
-            LogCollection = mongoDatabase.GetCollection<Log>(
-                iwebDatabaseSettings.Value.LogCollectionName);
+            logCollection = mongoDatabase.GetCollection<Log>(
+                iwebDatabaseSettings.Value.LogsCollectionName);
         }
 
         public async Task<List<Log>> GetLog() =>
-            await LogCollection.Find(_ => true).ToListAsync();
+            await logCollection.Find(_ => true).ToListAsync();
 
         //public async Task<Log?> GetLogById(Guid id) =>
         //    await LogCollection.Find(x => x.id == id).FirstOrDefaultAsync();
 
         public async Task CreateLog(Log newLog) =>
-            await LogCollection.InsertOneAsync(newLog);
+            await logCollection.InsertOneAsync(newLog);
 
         //public async Task UpdateLog(Guid id, Log updatedLog) =>
         //    await LogCollection.ReplaceOneAsync(x => x.id == id, updatedLog);
