@@ -9,4 +9,7 @@ public class iwebDatabaseSettings
     public string UsuariosCollectionName { get; set; } = null!;
 
     public string MessagesCollectionName { get; set; } = null!;
+
+    public string LogCollectionName { get; set; } = null!;
+
 }
