@@ -139,5 +139,49 @@ namespace B3serverREST.Controllers
 
             return NoContent();
         }
+
+        //[HttpGet("getSinRespuesta/{id1}")]
+        //public async Task<ActionResult<List<Cabecera>>> GetSinRespuesta(string id)
+        //{
+        //    var mensajes = await MensajeService.GetPendientes(id);
+        //    var respuestas = new List<Mensaje>();
+
+        //    foreach (Mensaje msg in mensajes)
+        //    {
+        //        respuestas = await MensajeService.IsLast(msg.cabecera.para, msg.cabecera.stamp);
+        //        if (respuestas.Count() > 0) mensajes.Remove(msg);
+        //    }
+
+        //    var cabeceras = new List<Cabecera>();
+
+        //    if (mensajes is null)
+        //    {
+        //        return NotFound();
+        //    }
+        //    else
+        //    {
+        //        foreach (Mensaje msg in mensajes)
+        //        {
+        //            cabeceras.Add(msg.cabecera);
+        //        }
+        //    }
+
+        //    return cabeceras.OrderBy(m => m.stamp).ToList();
+        //}
+
+        //[HttpGet("getContactos/{id}")]
+        //public async Task<ActionResult<List<string>>> GetContactos(string id)
+        //{
+        //    var contactos = await MensajeService.GetContactos(id);
+
+
+        //    if (contactos is null)
+        //    {
+        //        return NotFound();
+        //    }
+
+        //    return contactos;
+        //}
+
     }
 }

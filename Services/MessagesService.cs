@@ -48,5 +48,26 @@ namespace B3serverREST.Services
 
         public async Task RemoveMessage(Guid id) =>
             await MessagesCollection.DeleteOneAsync(x => x.id == id);
+
+        //public async Task<List<Mensaje>> GetPendientes(string id) =>
+        //    await MensajeCollection.Find(Mensaje => Mensaje.cabecera.de == id).ToListAsync();
+
+        //public async Task<List<Mensaje>> IsLast(string id, DateTime stamp) =>
+        //    await MensajeCollection.Find(Mensaje => Mensaje.cabecera.de == id && Mensaje.cabecera.stamp.CompareTo(stamp) > 0).ToListAsync();
+
+        //public async Task<List<string>> GetContactos(string usuario)
+        //{
+        //    List<Mensaje> mensajes = await GetByUsuario(usuario);
+        //    var contactos = new List<string>();
+        //    foreach (var m in mensajes)
+        //    {
+        //        if (!contactos.Contains(m.cabecera.para))
+        //        {
+        //            contactos.Add(m.cabecera.para);
+        //        }
+        //    }
+
+        //    return contactos;
+        //}
     }
 }
