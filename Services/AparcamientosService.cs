@@ -28,6 +28,12 @@ namespace B3serverREST.Services
         public async Task<Aparcamiento?> GetAparcamientoBypoiID(int poiID) =>
             await AparcamientosCollection.Find(x => x._id == poiID).FirstOrDefaultAsync();
 
+        public async Task<List<Aparcamiento>> GetAparcamientos25Free() =>
+            await AparcamientosCollection.Find(x => (x.libres / x.capacidad).CompareTo(0.25) >= 0).ToListAsync();
+
+        public async Task<List<Aparcamiento>> GetAparcamientosContainingString(string s) =>
+            await AparcamientosCollection.Find(x => x.nombre.ToUpper().Contains(s.ToUpper())).ToListAsync();
+
         public async Task CreateAparcamiento(Aparcamiento newAparcamiento) =>
             await AparcamientosCollection.InsertOneAsync(newAparcamiento);
 

@@ -32,6 +32,14 @@ namespace B3serverREST.Controllers
             return Aparcamiento;
         }
 
+        [HttpGet("get25Free")]
+        public async Task<List<Aparcamiento>> Get25Free() =>
+            await AparcamientosService.GetAparcamientos25Free();
+
+        [HttpGet("getContainingString/{String}")]
+        public async Task<List<Aparcamiento>> GetContainingString(string String) =>
+            await AparcamientosService.GetAparcamientosContainingString(String);
+
         [HttpPost]
         public async Task<IActionResult> Post(Aparcamiento newAparcamiento)
         {

@@ -12,6 +12,8 @@ public class iwebDatabaseSettings
 
     public string AparcamientosCollectionName { get; set; } = null!;
 
+    public string ImagenCollectionName { get; set; } = null!;
+
     public string LogsCollectionName { get; set; } = null!;
 
 }

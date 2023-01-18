@@ -9,7 +9,7 @@ builder.Services.Configure<iwebDatabaseSettings>(
     builder.Configuration.GetSection("iwebDatabase"));
 
 builder.Services.AddSingleton<UsuariosService>();
-builder.Services.AddSingleton<MessagesService>();
+builder.Services.AddSingleton<ImagenService>();
 builder.Services.AddSingleton<AparcamientosService>();
 builder.Services.AddSingleton<LogService>();
 

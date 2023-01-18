@@ -38,26 +38,26 @@ namespace B3serverREST.Controllers
 
 
 
-        [HttpGet("getCabecerasByUserDesc/{id}")]
-        public async Task<ActionResult<List<MessageDTO>>> GetCabecerasByUserDesc(Guid id)
-        {
-            var Messages = await MessagesService.GetByUserDesc(id);
+        //[HttpGet("getCabecerasByUserDesc/{id}")]
+        //public async Task<ActionResult<List<MessageDTO>>> GetCabecerasByUserDesc(Guid id)
+        //{
+        //    var Messages = await MessagesService.GetByUserDesc(id);
 
-            List<MessageDTO> messagesDTO = new List<MessageDTO>();
+        //    List<MessageDTO> messagesDTO = new List<MessageDTO>();
 
-            foreach (var m in Messages)
-            {
-                MessageDTO cabecera = new MessageDTO { id = m.id, de = m.de, para = m.para, asunto = m.asunto, stamp = m.stamp };
-                messagesDTO.Add(cabecera);
-            }
+        //    foreach (var m in Messages)
+        //    {
+        //        MessageDTO cabecera = new MessageDTO { id = m.id, de = m.de, para = m.para, asunto = m.asunto, stamp = m.stamp };
+        //        messagesDTO.Add(cabecera);
+        //    }
 
-            if (Messages is null)
-            {
-                return NotFound();
-            }
+        //    if (Messages is null)
+        //    {
+        //        return NotFound();
+        //    }
 
-            return messagesDTO;
-        }
+        //    return messagesDTO;
+        //}
 
 
         [HttpGet("getContactos/{id}")]
