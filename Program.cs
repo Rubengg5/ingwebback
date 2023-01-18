@@ -10,6 +10,7 @@ builder.Services.Configure<iwebDatabaseSettings>(
 
 builder.Services.AddSingleton<UsuariosService>();
 builder.Services.AddSingleton<MessagesService>();
+builder.Services.AddSingleton<AparcamientosService>();
 builder.Services.AddSingleton<LogService>();
 
 builder.Services.AddControllers();
